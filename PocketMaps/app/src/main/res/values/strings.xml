@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PocketMaps</string>
+    <string name="app_name">E-Laundry Kurir</string>
 
     <string name="action_settings">Settings</string>
     <string name="on_google_map">On Google Map</string>
@@ -33,7 +33,7 @@
     <string name="stop">Stop</string>
     <string name="km">km</string>
     <string name="meter">m</string>
-    <string name="h:m">h:m</string>
+    <string name="h_m">h:m</string>
     <string name="settings">Settings</string>
     <string name="change_map">Change map</string>
     <string name="download_map">Download map</string>

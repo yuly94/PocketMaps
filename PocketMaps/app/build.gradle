@@ -1,45 +1,53 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
-
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "com.junjunguo.pocketmaps"
+        applicationId 'com.yuly.elaundry.kurir'
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 25
         versionCode 8
         versionName "1.7"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 }
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.android.support:design:22.2.0'
-    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
     compile 'com.jjoe64:graphview:4.0.1'
-
-    compile(group: 'com.graphhopper', name: 'graphhopper', version: '0.4.1') {
+    //Android Graph Library for creating zoomable and scrollable line and bar graphs
+    compile('com.graphhopper:graphhopper:0.5.0') {
+        //An open source routing library and server using OpenStreetMap
         exclude group: 'com.google.protobuf', module: 'protobuf-java'
         exclude group: 'org.openstreetmap.osmosis', module: 'osmosis-osm-binary'
         exclude group: 'org.apache.xmlgraphics', module: 'xmlgraphics-commons'
     }
-
-    compile group: 'org.mapsforge', name: 'mapsforge-core', version: '0.5.0'
-    compile group: 'org.mapsforge', name: 'mapsforge-map', version: '0.5.0'
-    compile group: 'org.mapsforge', name: 'mapsforge-map-android', version: '0.5.0'
-    compile group: 'org.mapsforge', name: 'mapsforge-map-reader', version: '0.5.0'
-
-    compile group: 'org.slf4j', name: 'slf4j-android', version: '1.7.10'
-    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.10'
-
+    compile 'org.mapsforge:mapsforge-core:0.5.0'
+    //Vector map library written in Java - running on Android and Desktop.
+    compile 'org.mapsforge:mapsforge-map:0.5.0'
+    //Vector map library written in Java - running on Android and Desktop.
+    compile 'org.mapsforge:mapsforge-map-android:0.5.0'
+    //Vector map library written in Java - running on Android and Desktop.
+    compile 'org.mapsforge:mapsforge-map-reader:0.5.0'
+    //Vector map library written in Java - running on Android and Desktop.
+    compile 'org.slf4j:slf4j-android:1.7.21'
+    //The Simple Logging Facade for Java
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    //The Simple Logging Facade for Java
 }
